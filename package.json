@@ -1,14 +1,10 @@
 {
-  "name": "deepseek-ai-video-generator",
+  "name": "ai-video-generator",
   "version": "1.0.0",
-  "description": "AI-powered video generator using DeepSeek + Express",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "echo 'Build step is not required, skipping.'"
   },
-  "dependencies": {
-    "axios": "^1.6.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
-  }
+  "dependencies": {}
 }
