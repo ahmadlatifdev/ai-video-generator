@@ -1,0 +1,21 @@
+name: AI System Status Refresh
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS Check
+        run: ./dns_check.sh
+      - name: Validate Runway API Key
+        run: ./validate_runway.sh
+      - name: Test Make.com Webhook
+        run: ./test_webhook.sh
+      - name: Supabase Backup
+        run: ./backup_script.sh
+      - name: GitHub 2FA Security Check
+        run: ./security_check.sh
+      - name: Hugging Face Model Deployment Check
+        run: ./deploy_hf.sh
